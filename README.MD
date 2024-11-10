@@ -57,39 +57,38 @@ Anotações e configurações mais comuns:
 Exemplo:
 (Obs: foi chamado o repository direto pelo controller somente para fins de teste)
 ```
-@RestController  
-@RequestMapping("/user")  
-public class UsuarioController {  
-  
-    @Autowired  
-    private UsuarioService service;  
-  
-  
-    @GetMapping  
-    public List<Usuario> getUsers() {  
-        return service.getUsers();  
-    }  
-  
-    @GetMapping("/{id}")  
-    public Usuario getUser(@PathVariable Integer id) {  
-        return service.getUser(id);  
-    }  
-  
-    @PostMapping  
-    public Usuario createUsuario(@RequestBody Usuario usuario) {  
-        return service.createUsuario(usuario);  
-    }  
-  
-    @DeleteMapping("/{id}")  
-    @ResponseStatus(HttpStatus.OK)  
-    public void deleteUsuario(@PathVariable("id") Integer id) {  
-        service.deleteUsuario(id);  
-    }  
-  
-    @PutMapping("/{id}")  
-    public Usuario updateUsuario(@RequestBody Usuario usuario, @PathVariable("id") Integer id) {  
-        return service.updateUsuario(usuario, id);  
-    }  
+@RestController
+@RequestMapping("/user")
+public class UserController {
+
+    @Autowired
+    private UserService service;
+
+    @GetMapping
+    public List<User> getUsers() {
+        return service.getUsers();
+    }
+
+    @GetMapping("/{id}")
+    public User getUser(@PathVariable Integer id) {
+        return service.getUser(id);
+    }
+
+    @PostMapping
+    public User createUser(@RequestBody User User) {
+        return service.createUser(User);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteUser(@PathVariable("id") Integer id) {
+        service.deleteUser(id);
+    }
+
+    @PutMapping("/{id}")
+    public User updateUser(@RequestBody User User, @PathVariable("id") Integer id) {
+        return service.updateUser(User, id);
+    }
 }
 ```
 [Request Mapping Doc](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-requestmapping.html)

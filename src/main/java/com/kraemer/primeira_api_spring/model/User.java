@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "app_user")
-public class Usuario {
+public class User {
 
     @Id
     @SequenceGenerator(sequenceName = "seq_user", name = "seq_user", allocationSize = 1)
@@ -15,9 +15,9 @@ public class Usuario {
 
     private String password;
 
-    public Usuario() {}
+    public User() {}
 
-    public Usuario(String login, String password) {
+    public User(String login, String password) {
         this.login = login;
         this.password = password;
     }
@@ -48,7 +48,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" +
+        return "User{" +
                 "id=" + id +
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
