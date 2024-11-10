@@ -27,7 +27,7 @@ Significa *Hypermedia as the Engine of Application State*. Fornecer links que in
 
 # Iniciando uma API no Spring Boot
 Para começar uma api, precisa adicionar o starter spring-boot-starter-web.
-Essa dependência adicionará o host Tomcat que iniciará o host na porta 8080.
+Essa dependência adicionará o servidor Tomcat que iniciará o host na porta 8080.
 
 ### Criando o Controller
 O controller é o recurso que disponibilizará as funcionalidades de negócio da aplicação através do protocolo HTTP.
