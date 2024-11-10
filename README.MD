@@ -301,7 +301,7 @@ Explicação:
 private ResponseEntity<Object> handleGeneral(Exception e, WebRequest request)
 ```
 Ao captar qualquer tipo de excessão por meio de request,  verifica se é do tipo BusinessException.
-Se for, chama o
+Se for, chama o método:
 ```
 @ExceptionHandler({BusinessException.class})  
 private ResponseEntity<Object> handleBusinessException(BusinessException e, WebRequest request)
